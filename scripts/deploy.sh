@@ -17,4 +17,4 @@ oc create secret tls wp1key --cert=./tls/tls.crt --key=./tls/tls.key
 oc create -f mqsc/mqsc.yaml
 
 set -e
-oc apply -f mqDeploy.yaml
+oc apply -f wp1deploy.yaml
