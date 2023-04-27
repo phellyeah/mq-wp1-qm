@@ -1,15 +1,15 @@
 #!/bin/bash
-oc project mq 
+oc project wbc1 
 set +e
 # Remove the runnning queue manager instance (if any)
 
-oc delete QueueManager mq2
+oc delete QueueManager wp1
 
 # Delete the route object and secret for the QueueManager keystore (if any), and the mqsc configMap
 oc delete route wp1route
 oc delete secret wp1key
 oc delete configMap wp1-mqsc
-# oc delete persistentvolumeclaim data-mq2-ibm-mq-0 
+
 set -e
 # Create the route and the keystore secret and mqsc configMap
 oc apply -f wp1route.yaml
