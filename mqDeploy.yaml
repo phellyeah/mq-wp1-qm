@@ -1,8 +1,8 @@
 apiVersion: mq.ibm.com/v1beta1
 kind: QueueManager
 metadata:
-  name: mq2
-  namespace: mq
+  name: wp1
+  namespace: wbc1
 spec:
   license:
     accept: true
@@ -32,7 +32,7 @@ spec:
     name: QM1
     mqsc:
     - configMap:
-        name: mq2-mqsc
+        name: wp1-mqsc
         items:
         - ivt.mqsc
   template:
@@ -53,7 +53,7 @@ spec:
     keys:
       - name: label1
         secret:
-          secretName: mq2key
+          secretName: wp1key
           items:
             - tls.key
             - tls.crt
