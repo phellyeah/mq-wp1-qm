@@ -27,8 +27,8 @@ spec:
         memory: 4Gi
     availability:
       updateStrategy: RollingUpdate
-      type: SingleInstance
-   #   type: NativeHA
+      #type: SingleInstance
+      type: NativeHA
     name: QM1
     mqsc:
     - configMap:
