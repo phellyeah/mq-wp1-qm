@@ -2,7 +2,7 @@ apiVersion: mq.ibm.com/v1beta1
 kind: QueueManager
 metadata:
   name: wp1
-  namespace: wbc1
+  namespace: wbc7
 spec:
   license:
     accept: true
